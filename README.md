@@ -60,4 +60,4 @@ Para compilar basta entrar na pasta raiz do projeto e executar o **comando make*
 Para executar o algoritmo basta, após o realizar com sucesso a eecução do comando make, utilizar o comando **./main**.<br/>
 
 Um exemplo do alogoritmo é apresentado abaixo:<br/>
-![alt text](https://github.com/lucasvictorsp/SGBD-Library/blob/main/Example.png)
+![alt text](https://github.com/lucasvictorsp/shortest-path-on-a-map/blob/main/example%20of%20running%20the%20algorithm.png)
