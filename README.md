@@ -60,5 +60,5 @@ Para compilar basta entrar na pasta raiz do projeto e executar o **comando make*
 Para executar o algoritmo basta, após o realizar com sucesso a eecução do comando make, utilizar o comando **./main**.<br/>
 
 Um exemplo do algoritmo é apresentado abaixo:<br/>
-**Obs.:** Repara na exemplo que dependendo do valor de W a função heurística utilizada se torna inadmissível e o método *WA\** não encontrado a **solução ótima**.
+**Obs.:** Repare no exemplo que dependendo do valor de W a função heurística utilizada se torna inadmissível e o método *WA\** não encontrado a **solução ótima**.
 ![alt text](https://github.com/lucasvictorsp/shortest-path-on-a-map/blob/main/example%20of%20running%20the%20algorithm.png)
