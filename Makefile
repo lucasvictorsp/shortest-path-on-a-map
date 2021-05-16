@@ -1,4 +1,4 @@
-# Project: Trabalho 1 de INF390
+# Project: shortest-path-on-a-map
 # Makefile para gerar o executavel para o teste das classes
 # PontoMap, main, Hash, Lista, Nodo
 #Criado por Lucas Victor es71512
