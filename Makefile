@@ -4,7 +4,7 @@
 #Criado por Lucas Victor es71512
 # Criado em 22/03/2015
 
-all: PontoMap.o main.o main.o
+all: PontoMap.o main.o
 	g++ -o main.exe PontoMap.o main.o
 
 PontoMap.o: PontoMap.h PontoMap.cpp
