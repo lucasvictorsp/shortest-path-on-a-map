@@ -19,20 +19,18 @@ E outras classes implemetadas neste trabalho, tais como:
 - **Hash.h:** esta classe foi criada com base no algoritmo do professor Marcus Vinicius. Ela foi usada na criação da *estrutura fechada* dos métodos.
 
 Todos os árquivos *.cpp e *.h estão comentados.<br/>
-Todos os 3 métodos são baseados no pseudocódigo abaixo. A diferença entre eles está em como os métodos implementam a função de **custo**.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-*Inserir* i em aberto<br/>
-**Enquanto** aberto não estiver vazio<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;C = Primeiro elemento de aberto<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Se C é M então retornar caminho<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Para cada** X filho de C<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Se** X ∈ aberto e (g(X) > g(C) + custo(C, X))<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Substitui (X, g(X)) por (X, g(C) + custo(C, X))<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Se** x ∉ aberto e X ∉ fechado<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserir X em aberto<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserir C em fechado<br/>
+Todos os 3 métodos são baseados no pseudocódigo abaixo. A diferença entre eles está em como os métodos implementam a função de **custo**.<br/>
+<br/>
+*Inserir* o ponto inicial em *aberto*<br/>
+**Enquanto** *aberto* não estiver vazio<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C = Primeiro elemento de *aberto*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se C é M então retornar caminho<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Para cada** X filho de C<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Se** X ∈ *aberto* e (g(X) > g(C) + custo(C, X))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Substitui (X, g(X)) por (X, g(C) + custo(C, X))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Se** X ∉ aberto e X ∉ fechado<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserir X em aberto<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserir C em fechado<br/>
 
 #### UCS:
 
