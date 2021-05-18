@@ -1,13 +1,8 @@
----
-header-includes:
-  - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
----
-
 ## Encontrar o melhor caminho em um mapa 2D:
 
-<p>Um conjunto de mapas está disponível na pasta *maps*. Estes mapas são bidimensionais, representados por matrizes de caracteres. A formatação dos mapas é simples: células marcadas com um “.” estão livres e células marcadas com um “@” estão bloqueadas. Na implementação dos agentes assumiremos que eles poderão se mover nas seguintes direções: cima, baixo, direita, esquerda, todas com o custo de 1, além das diagonais, com o custo de 1,5 (≈√2). Movimentos diagonais não serão permitidos em cantos que estiverem bloqueados.</p><br/>
+Um conjunto de mapas está disponível na pasta *maps*. Estes mapas são bidimensionais, representados por matrizes de caracteres. A formatação dos mapas é simples: células marcadas com um “.” estão livres e células marcadas com um “@” estão bloqueadas. Na implementação dos agentes assumiremos que eles poderão se mover nas seguintes direções: cima, baixo, direita, esquerda, todas com o custo de 1, além das diagonais, com o custo de 1,5 (≈√2). Movimentos diagonais não serão permitidos em cantos que estiverem bloqueados.<br/>
 
-<p>Na implementação dos algoritmos <font style="font-family: monaco">Uniform Cost Search (UCS)</font>, <font style="font-family: monaco">A\*</font> e <font style="font-family: monaco">WA\*</font> foi utilizado a linguagem *C++*, e algumas classes nativas, como:</p>
+Na implementação dos algoritmos <font style="font-family: monaco">Uniform Cost Search (UCS)</font>, <font style="font-family: monaco">A\*</font> e <font style="font-family: monaco">WA\*</font> foi utilizado a linguagem *C++*, e algumas classes nativas, como:
 
 - **iostream:** para tratamento de entrada e saída de dados.
 - **fstream:** para tratamento de arquivo, neste caso arquivos de texto (*.map).
@@ -24,55 +19,32 @@ E outras classes implemetadas neste trabalho, tais como:
 - **Hash.h:** esta classe foi criada com base no algoritmo do professor Marcus Vinicius. Ela foi usada na criação da *estrutura fechada* dos métodos.
 
 Todos os árquivos *.cpp e *.h estão comentados.<br/>
+Todos os 3 métodos são baseados no pseudocódigo abaixo. A diferença entre eles está em como os métodos implementam a função de **custo**.
 
-<p>Todos os 3 métodos são baseados no pseudocódigo abaixo. A diferença entre eles está em como os métodos implementam a função de **custo**.</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-*Inserir* i em aberto
-**Enquanto** aberto não estiver vazio
-	C = Primeiro elemento de aberto
-	Se C é M então retornar caminho
-	**Para cada** X filho de C
-		**Se** X ∈ aberto e (g(X) > g(C) + custo(C, X))
-			Substitui (X, g(X)) por (X, g(C) + custo(C, X))
-		**Se** x ∉ aberto e X ∉ fechado
-			Inserir X em aberto
-		Inserir C em fechado
-
-<br/>
-# Algorithm 1
-Just a sample algorithmn
-\begin{algorithm}[H]
-\DontPrintSemicolon
-\SetAlgoLined
-\KwResult{Write here the result}
-\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
-\Input{Write here the input}
-\Output{Write here the output}
-\BlankLine
-\While{While condition}{
-    instructions\;
-    \eIf{condition}{
-        instructions1\;
-        instructions2\;
-    }{
-        instructions3\;
-    }
-}
-\caption{While loop with If/Else condition}
-\end{algorithm}
-<br/>
+*Inserir* i em aberto<br/>
+**Enquanto** aberto não estiver vazio<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;C = Primeiro elemento de aberto<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Se C é M então retornar caminho<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Para cada** X filho de C<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Se** X ∈ aberto e (g(X) > g(C) + custo(C, X))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Substitui (X, g(X)) por (X, g(C) + custo(C, X))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Se** x ∉ aberto e X ∉ fechado<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserir X em aberto<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserir C em fechado<br/>
 
 #### UCS:
 
-<p>No *UCS* a função de custo é dada pelo *custo real* que o agente levou para sair do ponto inicial até o ponto corrente.</p>
+No *UCS* a função de custo é dada pelo *custo real* que o agente levou para sair do ponto inicial até o ponto corrente.
 
 #### A\*:
 
-<p>No método *A\** o custo de chegar até o ponto corrente é o *curto real* adicionado do *custo heurístico* (*valor Heurístico*).</p>
+No método *A\** o custo de chegar até o ponto corrente é o *curto real* adicionado do *custo heurístico* (*valor Heurístico*).
 
 #### WA\*:
 
-<p>O método *WA\** é apenas uma adaptação da função heurística, ou seja, ela é multiplicada pelo valor de **W**.</p>
+O método *WA\** é apenas uma adaptação da função heurística, ou seja, ela é multiplicada pelo valor de **W**.<br/>
 
 #### Principais características da implementação:
 
@@ -82,7 +54,7 @@ Just a sample algorithmn
 
 #### Compilar e Executar:
 
-<p>O algoritmo foi implementado e testado apenas no *SO Linux*. Entretanto, é provável que ele execute no Windows sem a necessidade de modificar os códigos fonte.</p><br/>
+O algoritmo foi implementado e testado apenas no *SO Linux*. Entretanto, é provável que ele execute no Windows sem a necessidade de modificar os códigos fonte.<br/>
 
 Para compilar basta entrar na pasta raiz do projeto e executar o **comando make**<br/>
 Para executar o algoritmo basta, após o realizar com sucesso a eecução do comando make, utilizar o comando **./main**.<br/>
